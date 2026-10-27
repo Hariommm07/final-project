@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hariom Kumar — Frontend Developer, Cybersecurity Enthusiast & Python Learner. Premium portfolio showcasing projects, skills, and education." />
+  <meta name="author" content="Hariom Kumar" />
+  <meta property="og:title" content="Hariom Kumar — Premium Portfolio" />
+  <meta property="og:description" content="Frontend Developer • Cybersecurity Enthusiast • Python Learner" />
+  <meta property="og:type" content="website" />
+  <title>Hariom Kumar — Premium Portfolio</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <!-- Google Fonts: Poppins + Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-ring"></div>
+    <p class="loader-text">Loading Portfolio<span class="dots"></span></p>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Floating Background Particles -->
+  <div class="bg-particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- ============== NAVBAR ============== -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand brand-logo" href="#home">
+        <span class="brand-mark">H</span>ariom<span class="brand-dot">.</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-primary-glow ripple" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============== HERO ============== -->
+  <header id="home" class="hero-section">
+    <div class="container h-100">
+      <div class="row align-items-center h-100 g-5">
+        <div class="col-lg-7 reveal">
+          <p class="hero-greet">Hello,</p>
+          <h1 class="hero-title">
+            I'm <span class="gradient-text">Hariom Kumar</span>
+          </h1>
+          <h2 class="hero-typing">
+            <span class="typing-prefix">I am a </span>
+            <span id="typing"></span><span class="caret">|</span>
+          </h2>
+          <p class="hero-desc">
+            I build responsive websites, interactive user interfaces, and continuously
+            explore networking and cybersecurity while expanding my programming expertise.
+          </p>
+          <div class="hero-cta">
+            <a href="#" class="btn btn-primary-glow ripple me-2 mb-2" download>
+              <i class="bi bi-download me-2"></i>Download Resume
+            </a>
+            <a href="#projects" class="btn btn-outline-glow ripple mb-2">
+              <i class="bi bi-rocket-takeoff me-2"></i>View Projects
+            </a>
+          </div>
+          <div class="hero-socials mt-4">
+            <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#contact" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-5 reveal">
+          <div class="hero-image-wrap glass-card floating">
+            <div class="glow-ring">
+              <!-- Replace src below with your real photo later -->
+              <div class="profile-placeholder" role="img" aria-label="Profile Image Placeholder">
+                <i class="bi bi-person-bounding-box"></i>
+                <span>Profile Image</span>
+              </div>
+            </div>
+            <div class="hero-badges">
+              <span class="badge-chip"><i class="bi bi-shield-lock"></i> Cybersecurity</span>
+              <span class="badge-chip"><i class="bi bi-code-slash"></i> Frontend</span>
+              <span class="badge-chip"><i class="bi bi-diagram-3"></i> Networking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </header>
+
+  <!-- ============== ABOUT ============== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">A passionate <span class="gradient-text">creator & learner</span></h2>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-7 reveal">
+          <div class="glass-card p-4 p-md-5 h-100">
+            <h3 class="h4 mb-3">Who I Am</h3>
+            <p class="muted-text">
+              I'm a Diploma student in Computer Science with a deep passion for crafting
+              modern, responsive web experiences. I love clean UI, smooth interactions,
+              and writing code that's a joy to read.
+            </p>
+            <p class="muted-text">
+              Alongside web development, I'm actively learning <strong>Networking</strong>,
+              <strong>Cybersecurity</strong>, and <strong>Python</strong> — building a
+              well-rounded foundation for a career in modern tech.
+            </p>
+            <div class="row g-3 mt-2">
+              <div class="col-sm-6"><div class="tick-row"><i class="bi bi-check2-circle"></i> Diploma Student</div></div>
+              <div class="col-sm-6"><div class="tick-row"><i class="bi bi-check2-circle"></i> Web Development</div></div>
+              <div class="col-sm-6"><div class="tick-row"><i class="bi bi-check2-circle"></i> Networking Learner</div></div>
+              <div class="col-sm-6"><div class="tick-row"><i class="bi bi-check2-circle"></i> Cybersecurity</div></div>
+              <div class="col-sm-6"><div class="tick-row"><i class="bi bi-check2-circle"></i> Python Programming</div></div>
+              <div class="col-sm-6"><div class="tick-row"><i class="bi bi-check2-circle"></i> Responsive Design</div></div>
+              <div class="col-sm-6"><div class="tick-row"><i class="bi bi-check2-circle"></i> Problem Solving</div></div>
+              <div class="col-sm-6"><div class="tick-row"><i class="bi bi-check2-circle"></i> UI/UX Mindset</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 reveal">
+          <div class="glass-card p-4 p-md-5 info-card h-100">
+            <h3 class="h4 mb-4">Personal Info</h3>
+            <ul class="info-list">
+              <li><i class="bi bi-person-fill"></i> <span>Name</span><strong>Hariom Kumar</strong></li>
+              <li><i class="bi bi-mortarboard-fill"></i> <span>Education</span><strong>Diploma — CSE</strong></li>
+              <li><i class="bi bi-geo-alt-fill"></i> <span>Location</span><strong>India</strong></li>
+              <li><i class="bi bi-envelope-fill"></i> <span>Email</span><strong>your@email.com</strong></li>
+              <li><i class="bi bi-translate"></i> <span>Languages</span><strong>English, Hindi</strong></li>
+              <li><i class="bi bi-stars"></i> <span>Interests</span><strong>Web, Security, AI</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SKILLS ============== -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Skills</span>
+        <h2 class="section-title">Tools I <span class="gradient-text">build with</span></h2>
+      </div>
+
+      <div class="row g-4">
+        <!-- Repeating skill cards -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass-card skill-card">
+            <div class="skill-head"><i class="bi bi-filetype-html"></i><h3>HTML5</h3><span>92%</span></div>
+            <div class="progress"><div class="progress-bar" data-value="92"></div></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass-card skill-card">
+            <div class="skill-head"><i class="bi bi-filetype-css"></i><h3>CSS3</h3><span>88%</span></div>
+            <div class="progress"><div class="progress-bar" data-value="88"></div></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass-card skill-card">
+            <div class="skill-head"><i class="bi bi-bootstrap"></i><h3>Bootstrap</h3><span>90%</span></div>
+            <div class="progress"><div class="progress-bar" data-value="90"></div></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass-card skill-card">
+            <div class="skill-head"><i class="bi bi-filetype-py"></i><h3>Python</h3><span>70%</span></div>
+            <div class="progress"><div class="progress-bar" data-value="70"></div></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass-card skill-card">
+            <div class="skill-head"><i class="bi bi-database"></i><h3>SQL</h3><span>65%</span></div>
+            <div class="progress"><div class="progress-bar" data-value="65"></div></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass-card skill-card">
+            <div class="skill-head"><i class="bi bi-diagram-3"></i><h3>Networking</h3><span>72%</span></div>
+            <div class="progress"><div class="progress-bar" data-value="72"></div></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass-card skill-card">
+            <div class="skill-head"><i class="bi bi-shield-lock"></i><h3>Cybersecurity</h3><span>68%</span></div>
+            <div class="progress"><div class="progress-bar" data-value="68"></div></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass-card skill-card">
+            <div class="skill-head"><i class="bi bi-git"></i><h3>Git</h3><span>78%</span></div>
+            <div class="progress"><div class="progress-bar" data-value="78"></div></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass-card skill-card">
+            <div class="skill-head"><i class="bi bi-github"></i><h3>GitHub</h3><span>80%</span></div>
+            <div class="progress"><div class="progress-bar" data-value="80"></div></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass-card skill-card">
+            <div class="skill-head"><i class="bi bi-phone"></i><h3>Responsive Design</h3><span>90%</span></div>
+            <div class="progress"><div class="progress-bar" data-value="90"></div></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass-card skill-card">
+            <div class="skill-head"><i class="bi bi-lightbulb"></i><h3>Problem Solving</h3><span>85%</span></div>
+            <div class="progress"><div class="progress-bar" data-value="85"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== PROJECTS ============== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Projects</span>
+        <h2 class="section-title">Things I've <span class="gradient-text">built</span></h2>
+      </div>
+
+      <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-lg-6 reveal">
+          <article class="glass-card project-card">
+            <div class="project-thumb">
+              <div class="thumb-placeholder">
+                <i class="bi bi-eyeglasses"></i>
+                <span>Optical Shop Website — Image Placeholder</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="h4">Optical Shop Website</h3>
+              <p class="muted-text">
+                A responsive optical store website featuring modern UI, stylish navigation,
+                product showcase, search functionality, hover animations and a clean
+                customer experience.
+              </p>
+              <ul class="feature-list">
+                <li><i class="bi bi-dot"></i> Responsive layout</li>
+                <li><i class="bi bi-dot"></i> Modern design</li>
+                <li><i class="bi bi-dot"></i> Product showcase</li>
+                <li><i class="bi bi-dot"></i> Animated navigation</li>
+                <li><i class="bi bi-dot"></i> Search UI & hover effects</li>
+              </ul>
+              <div class="badge-row">
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">Bootstrap</span>
+              </div>
+              <a href="#" class="btn btn-primary-glow ripple mt-3">
+                <i class="bi bi-box-arrow-up-right me-2"></i>View Project
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-lg-6 reveal">
+          <article class="glass-card project-card">
+            <div class="project-thumb">
+              <div class="thumb-placeholder">
+                <i class="bi bi-magic"></i>
+                <span>Animation Projects — Image Placeholder</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="h4">Animation Projects</h3>
+              <p class="muted-text">
+                A creative collection of animation experiments built with HTML, CSS and
+                JavaScript — exploring motion, character animation and interactive UI.
+              </p>
+              <ul class="feature-list">
+                <li><i class="bi bi-dot"></i> Mario Running Animation</li>
+                <li><i class="bi bi-dot"></i> Nobita Walking Animation</li>
+                <li><i class="bi bi-dot"></i> CSS Hover Animations</li>
+                <li><i class="bi bi-dot"></i> Landing Page Animations</li>
+                <li><i class="bi bi-dot"></i> 3D Hover Effects</li>
+              </ul>
+              <div class="badge-row">
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">JavaScript</span>
+              </div>
+              <a href="#" class="btn btn-primary-glow ripple mt-3">
+                <i class="bi bi-box-arrow-up-right me-2"></i>View Project
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== EDUCATION ============== -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Education</span>
+        <h2 class="section-title">My <span class="gradient-text">journey</span></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card p-4">
+            <span class="time-chip">Current</span>
+            <h3 class="h5 mt-2">Diploma in Computer Science</h3>
+            <p class="muted-text mb-1">Government Polytechnic</p>
+            <p class="muted-text small mb-0">Building strong fundamentals in programming, web development and computer systems.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card p-4">
+            <span class="time-chip">Next Goal</span>
+            <h3 class="h5 mt-2">B.Tech (Lateral Entry)</h3>
+            <p class="muted-text mb-1">Specialization: Cybersecurity</p>
+            <p class="muted-text small mb-0">Planning to deepen knowledge in network security, ethical hacking and secure systems design.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Counters -->
+      <div class="row g-4 mt-2">
+        <div class="col-6 col-lg-3 reveal">
+          <div class="glass-card counter-card">
+            <i class="bi bi-kanban"></i>
+            <h3 class="counter" data-target="12">0</h3>
+            <p>Projects Completed</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 reveal">
+          <div class="glass-card counter-card">
+            <i class="bi bi-stack"></i>
+            <h3 class="counter" data-target="15">0</h3>
+            <p>Technologies Learned</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 reveal">
+          <div class="glass-card counter-card">
+            <i class="bi bi-hourglass-split"></i>
+            <h3 class="counter" data-target="850">0</h3>
+            <p>Hours of Coding</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 reveal">
+          <div class="glass-card counter-card">
+            <i class="bi bi-palette"></i>
+            <h3 class="counter" data-target="30">0</h3>
+            <p>Creative Designs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CONTACT ============== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Let's <span class="gradient-text">work together</span></h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-5 reveal">
+          <div class="glass-card p-4 p-md-5 h-100">
+            <h3 class="h4 mb-4">Get in touch</h3>
+            <ul class="contact-list">
+              <li><i class="bi bi-envelope-fill"></i><div><span>Email</span><strong>your@email.com</strong></div></li>
+              <li><i class="bi bi-telephone-fill"></i><div><span>Phone</span><strong>+91 00000 00000</strong></div></li>
+              <li><i class="bi bi-github"></i><div><span>GitHub</span><strong>github.com/your-handle</strong></div></li>
+              <li><i class="bi bi-linkedin"></i><div><span>LinkedIn</span><strong>linkedin.com/in/your-handle</strong></div></li>
+              <li><i class="bi bi-geo-alt-fill"></i><div><span>Location</span><strong>India</strong></div></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-7 reveal">
+          <form class="glass-card p-4 p-md-5 contact-form" id="contactForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="cf-name">Name</label>
+                <input type="text" id="cf-name" class="form-control glass-input" required placeholder="Your name" />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="cf-email">Email</label>
+                <input type="email" id="cf-email" class="form-control glass-input" required placeholder="you@example.com" />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="cf-subject">Subject</label>
+                <input type="text" id="cf-subject" class="form-control glass-input" required placeholder="What's it about?" />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="cf-message">Message</label>
+                <textarea id="cf-message" rows="5" class="form-control glass-input" required placeholder="Write your message..."></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary-glow ripple">
+                  <i class="bi bi-send-fill me-2"></i>Send Message
+                </button>
+                <p class="form-status mt-3" id="formStatus" aria-live="polite"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 muted-text">&copy; <span id="year"></span> Hariom Kumar. Crafted with passion.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="footer-socials">
+            <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#contact" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
